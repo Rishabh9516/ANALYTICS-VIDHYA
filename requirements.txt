@@ -1,0 +1,28 @@
+# Core
+fastapi
+uvicorn
+
+# RAG
+langchain
+langchain-community
+langchain-groq
+langchain-chroma
+langchain-text-splitters
+chromadb
+onnxruntime
+tokenizers
+
+# Data Processing
+pandas
+beautifulsoup4
+lxml
+
+# Config
+python-dotenv
+pydantic-settings
+
+# Testing
+httpx
+pytest
+pytest-asyncio
+anyio
