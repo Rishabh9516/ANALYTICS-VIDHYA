@@ -1,3 +1,13 @@
+---
+title: Python QA Assistant
+emoji: 🐍
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # 🐍 Python Programming Q&A Assistant
 
 An AI-powered question-answering system that helps data science learners get accurate, grounded answers to their Python programming questions. Built with **RAG (Retrieval-Augmented Generation)** using Stack Overflow Python Q&A data.

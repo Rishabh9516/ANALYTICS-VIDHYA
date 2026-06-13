@@ -1,7 +1,6 @@
 # =============================================================================
-# Python Q&A Assistant — Dockerfile
+# Python Q&A Assistant — Dockerfile (Hugging Face Spaces)
 # =============================================================================
-# Multi-stage build for a lean production image.
 
 FROM python:3.12-slim AS base
 
@@ -37,12 +36,12 @@ COPY vectorstore/ ./vectorstore/
 # Copy config
 COPY .env.example ./.env.example
 
-# Expose port
-EXPOSE 8000
+# HF Spaces requires port 7860
+EXPOSE 7860
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
-    CMD python -c "import httpx; r = httpx.get('http://localhost:8000/health'); assert r.status_code == 200"
+    CMD python -c "import httpx; r = httpx.get('http://localhost:7860/health'); assert r.status_code == 200"
 
-# Run the application
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
+# Run the application on port 7860 (HF Spaces requirement)
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860", "--workers", "1"]
