@@ -10,6 +10,8 @@ pinned: false
 
 # 🐍 Python Programming Q&A Assistant
 
+🚀 **Live Deployed Application (API Docs)**: [https://huggingface.co/spaces/kumarRishabh8787/python-qa-assistant](https://huggingface.co/spaces/kumarRishabh8787/python-qa-assistant)
+
 An AI-powered question-answering system that helps data science learners get accurate, grounded answers to their Python programming questions. Built with **RAG (Retrieval-Augmented Generation)** using Stack Overflow Python Q&A data.
 
 ## 🏗️ Architecture
